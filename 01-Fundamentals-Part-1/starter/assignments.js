@@ -55,10 +55,20 @@ language = 'Hindi';
         let averagePopulation = 33;
         console.log(population < averagePopulation);
 
+
+        
 /*  5. Based on the variables you created, create a new variable 'description'
     which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese' */
+    
+/* lecture 17
+        LECTURE: Strings and Template Literals
+1. Recreate the 'description' variable from the last assignment, this time
+using the template literal syntax
+*/
+
         let description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
         console.log(description);
 
 
 //---------------------------------------------------------------//
+
