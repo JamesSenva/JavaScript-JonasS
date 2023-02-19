@@ -2,7 +2,7 @@
 
 const country = 'India';
 const continent = 'Asia';
-let population = 1415060319;
+let population = 1393.4;
 const isIsland = false;
 let language;
 
@@ -13,7 +13,7 @@ let language;
 // console.log(language, typeof language );
 // console.log(typeof null);
 
-//---------------------------------------------------------------
+//---------------------------------------------------------------//
 
 // lecture 13
 // let, const and var
@@ -28,9 +28,37 @@ let language;
 
 language = 'Hindi';
 
-console.log(country, typeof country);
-console.log(continent, typeof country);
-console.log(population, typeof population);
-console.log(isIsland, typeof isIsland );
-console.log(language, typeof language );
-console.log(typeof null);
+// console.log(country, typeof country);
+// console.log(continent, typeof country);
+// console.log(population, typeof population);
+// console.log(isIsland, typeof isIsland );
+// console.log(language, typeof language );
+// console.log(typeof null);
+
+
+//---------------------------------------------------------------//
+
+/*  lecture 14
+    basic operators
+    1. If your country split in half, and each half would contain half the population, then how many people would live in each half? */ 
+        let halfPopulation = population / 2;
+        console.log(halfPopulation);
+        
+/*   2. Increase the population of your country by 1 and log the result to the console */
+        population++;
+        console.log(population);
+
+/*    3. Finland has a population of 6 million. Does your country have more people than Finland? */
+        console.log(population - 6);
+
+/*   4. The average population of a country is 33 million people. Does your country have less people than the average country? */
+        let averagePopulation = 33;
+        console.log(population < averagePopulation);
+
+/*  5. Based on the variables you created, create a new variable 'description'
+    which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese' */
+        let description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
+        console.log(description);
+
+
+//---------------------------------------------------------------//
