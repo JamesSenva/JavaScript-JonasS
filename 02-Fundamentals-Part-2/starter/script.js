@@ -67,24 +67,57 @@
 
 // 1. Create a function called 'describePopulation'. Use the function type you like the most. This function takes in two arguments: 'country' and 'population', and returns a string like this: 'China has 1441 million people which is about 18.2% of the world.'
 
-const percentageOfWorld3 = population => ((100 * population) / 7900).toFixed(1);
+// const percentageOfWorld3 = population => ((100 * population) / 7900).toFixed(1);
 
 // const describePopulation = (country, population) => {
 //     return `${country} has ${population} million people which is about ${percentageOfWorld3(population)} % of the world.`
 // }
 
-const describePopulation = (country, population) => {
-    const percentage = percentageOfWorld3(population);
-    const description = `${country} has ${population} million people which is about ${percentage}% of the world.`
-    console.log(description);
-}
+// const describePopulation = (country, population) => {
+//     const percentage = percentageOfWorld3(population);
+//     const description = `${country} has ${population} million people which is about ${percentage}% of the world.`
+//     console.log(description);
+//}
 // 2. To calculate the percentage, 'describePopulation' call the 'percentageOfWorld1' you created earlier
 
 // 3. Call 'describePopulation' with data for 3 countries of your choice
 
-describePopulation('China', 1441);
-describePopulation('India', 1394);
-describePopulation('USA', 500);
+// describePopulation('China', 1441);
+// describePopulation('India', 1394);
+// describePopulation('USA', 500);
 
 
 //------------------------------------------------------------------
+
+// lecture 39 arrays
+
+// 1. Create an array containing 4 population values of 4 countries of your choice. You may use the values you have been using previously. Store this array into a variable called 'populations'
+
+    const populations = [1394, 1441, 500, 250];
+
+
+// 2. Log to the console whether the array has 4 elements or not (true or false)
+
+    // my solution
+    if(populations.length === 4){
+        console.log(true);
+    }else{
+        console.log(false);
+    }
+
+    // we can also log true or false into the console like this too
+
+    console.log(populations.length === 4);
+
+
+// 3. Create an array called 'percentages' containing the percentages of the world population for these 4 population values. Use the function 'percentageOfWorld1' that you created earlier to compute the 4 percentage values
+
+    const percentageOfWorld3 = population => ((100 * population) / 7900).toFixed(1);
+
+    const percentages = [];
+
+    populations.forEach( population => {
+        return percentages.push(percentageOfWorld3(population));
+    })
+
+    console.log(percentages);
