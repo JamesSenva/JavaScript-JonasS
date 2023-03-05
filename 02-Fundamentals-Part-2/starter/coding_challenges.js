@@ -152,32 +152,85 @@ GOOD LUCK 😀  */
 // challenge
 // Jonas is a 46- year old teacher, and he has a drivers license
 
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Schmedtmann',
-    birthYeah: 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven'],
-    hasDriversLicense: false,
-  
-    // calcAge: function (birthYeah) {
-    //   return 2037 - birthYeah;
-    // }
-  
-    // calcAge: function () {
-    //   // console.log(this);
-    //   return 2037 - this.birthYeah;
-    // }
-  
-    calcAge: function () {
-      this.age = 2037 - this.birthYeah;
-      return this.age;
-    },
+    // const jonas = {
+    //     firstName: 'Jonas',
+    //     lastName: 'Schmedtmann',
+    //     birthYeah: 1991,
+    //     job: 'teacher',
+    //     friends: ['Michael', 'Peter', 'Steven'],
+    //     hasDriversLicense: false,
+    
+    //     // calcAge: function (birthYeah) {
+    //     //   return 2037 - birthYeah;
+    //     // }
+    
+    //     // calcAge: function () {
+    //     //   // console.log(this);
+    //     //   return 2037 - this.birthYeah;
+    //     // }
+    
+    //     calcAge: function () {
+    //     this.age = 2037 - this.birthYeah;
+    //     return this.age;
+    //         },
 
-    getSummary: function() {
-        this.summary = `${this.firstName} is ${this.calcAge()} - year old ${this.job}, he has ${this.hasDriversLicense ? 'a' : 'no'} drivers license.`;
-        return this.summary;
+    //     getSummary: function() {
+    //         this.summary = `${this.firstName} is ${this.calcAge()} - year old ${this.job}, he has ${this.hasDriversLicense ? 'a' : 'no'} drivers license.`;
+    //         return this.summary;
+    //         }
+    //     }
+
+    //     console.log(jonas.getSummary());    
+
+
+//---------------------------------------------------------------------
+
+/* Coding Challenge #3
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations!
+
+Remember: BMI = mass / height ** 2 = mass / (height * height)
+(mass in kg and height in meter)
+
+Your tasks:
+1. For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith)
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same
+method on both objects). Store the BMI value to a property, and also return it
+from the method
+3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+
+Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+GOOD LUCK 😀 */ 
+
+    const markInfo = {
+        firstName: 'Mark',
+        lastName: 'Miller',
+        weight: 78,
+        height: 1.69,
+        calcBMI: function(){
+            this.BMI = (this.weight / this.height ** 2).toFixed(1);
+            return this.BMI;
+        }
     }
-}
 
-console.log(jonas.getSummary());
+    markInfo.calcBMI();
+    // console.log(markInfo.BMI);
+
+    const johnInfo = {
+        firstName: 'John',
+        lastName: 'Smith',
+        weight: 92,
+        height: 1.95,
+        calcBMI: function(){
+            this.BMI = (this.weight / this.height ** 2).toFixed(1);
+            return this.BMI;
+        }
+    }
+
+    johnInfo.calcBMI();
+
+
+    if(markInfo.BMI > johnInfo.BMI){
+        console.log(`${markInfo.firstName} ${markInfo.lastName}'s BMI (${markInfo.BMI}) is higher than ${johnInfo.firstName} ${johnInfo.lastName} BMI (${johnInfo.BMI})`);
+    }else{
+        console.log(`${johnInfo.firstName} ${johnInfo.lastName}'s BMI (${johnInfo.BMI}) is higher than ${markInfo.firstName} ${markInfo.lastName}'s BMI (${markInfo.BMI})`);
+    }
