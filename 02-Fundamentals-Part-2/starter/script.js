@@ -241,7 +241,7 @@
 
 // 1. Let's bring back the 'populations' array from a previous assignment
 
-    const populations = [10, 1441, 332, 83];
+    // const populations = [10, 1441, 332, 83];
 
 // 2. Use a for loop to compute an array called 'percentages2' containing the percentages of the world population for the 4 population values. Use the function 'percentageOfWorld1' that you created earlier
 
@@ -250,25 +250,49 @@
     //     return ((100 * population) / 7900).toFixed(1);
     // }
 
-    const percentages2 = [];
+    // const percentages2 = [];
 
-    function percentageOfWorld1 (populations) {
-            return ((100 * populations) / 7900).toFixed(1);
-    }
+    // function percentageOfWorld1 (populations) {
+    //         return ((100 * populations) / 7900).toFixed(1);
+    // }
 
-    for (let i = 0; i < populations.length; i++) {
+    // for (let i = 0; i < populations.length; i++) {
 
         
-        // console.log(percentageOfWorld1(populations[i]));
+    //     // console.log(percentageOfWorld1(populations[i]));
 
-        // my solutions
-        // percentages2.push(((100 * populations[i]) / 7900).toFixed(1))
+    //     // my solutions
+    //     // percentages2.push(((100 * populations[i]) / 7900).toFixed(1))
         
-        const percent = percentageOfWorld1(populations[i]);
-        percentages2.push(percent);
-    }
+    //     const percent = percentageOfWorld1(populations[i]);
+    //     percentages2.push(percent);
+    // }
 
-    console.log(percentages2);
+    // console.log(percentages2);
 
 // 3. Confirm that 'percentages2' contains exactly the same values as the 'percentages' array that we created manually in the previous assignment, and reflect on how much better this solution is
+
+//------------------------------------------------------------------------
+
+// lecture 48 : Looping Backwards and Loops in Loops
+
+// 1. Store this array of arrays into a variable called 'listOfNeighbours'  [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden','Russia']];
+
+    const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden','Russia']];
+
+// 2. Log only the neighbouring countries to the console, one by one, not the entire arrays. Log a string like 'Neighbour: Canada' for each country
+
+    for(let i = 0; i < listOfNeighbours.length; i++){
+
+        // console.log(i, listOfNeighbours[i]);
+
+        for(let j = 0; j < listOfNeighbours[i].length; j++){
+            console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+        }
+
+    }
+
+// 3. You will need a loop inside a loop for this. This is actually a bit tricky, so don't worry if it's too difficult for you! But you can still try to figure this out anyway 😉
+
+//------------------------------------------------------------------------
 
