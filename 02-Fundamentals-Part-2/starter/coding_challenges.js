@@ -74,28 +74,29 @@ values (so don't store the tip values in separate variables first, but right in 
 array) 😉
 GOOD LUCK 😀  */
 
-    const calcTip = (bill) => {
-        if(bill >= 50 && bill <= 300){
-            return ((bill * 15) / 100 );
-        }else{
-            return ((bill * 20) / 100);
-        }
-    };
+    // const calcTip = (bill) => {
+    //     if(bill >= 50 && bill <= 300){
+    //         return ((bill * 15) / 100 );
+    //     }else{
+    //         return ((bill * 20) / 100);
+    //     }
+    // };
 
     // calcTip(400);
 
-    const bills = [125, 555, 44];
+    // const bills = [125, 555, 44];
 
-    const tips = [];
+    // const tips = [];
 
-    bills.forEach(bill => {
-        return tips.push(calcTip(bill));
-    })
+    // bills.forEach(bill => {
+    //     return tips.push(calcTip(bill));
+    // })
 
-    console.log(tips);
+    // console.log(tips);
 
-    const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+    // const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
+    /*
     // const total = [];
     
     // for( let i = 0; i <= bills.length - 1; i++){
@@ -114,4 +115,36 @@ GOOD LUCK 😀  */
     // }
 
     // total.push(calcTotal(bills[0], tips[0]));
-    console.log('total:', total);
+    */
+
+    // console.log('total:', total);
+
+//---------------------------------------------------------------------
+
+    // challenge
+    // jonas has 3 friends, and his best friend is called micheal
+
+    const jonas = {
+        age: 46,
+        firstName: 'Jonas',
+        lastName: 'Schmedtmann',
+        friends: ['Michael', 'Peter', 'Steven'],
+        job: 'teacher',
+    }
+
+    const interestedIn = prompt('What do you want to know about jonas?');
+
+
+        if(interestedIn === 'friends'){
+            console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}`);
+        } else if(jonas[interestedIn]) {
+            console.log(jonas[interestedIn]);
+        } else {
+            console.log('Wrong request.')
+        } 
+        
+    const bestFriend = `${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}`;
+
+    console.log(bestFriend);
+
+//---------------------------------------------------------------------
