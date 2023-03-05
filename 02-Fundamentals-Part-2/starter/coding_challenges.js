@@ -124,27 +124,27 @@ GOOD LUCK 😀  */
     // challenge
     // jonas has 3 friends, and his best friend is called micheal
 
-    const jonas = {
-        age: 46,
-        firstName: 'Jonas',
-        lastName: 'Schmedtmann',
-        friends: ['Michael', 'Peter', 'Steven'],
-        job: 'teacher',
-    }
+    // const jonas = {
+    //     age: 46,
+    //     firstName: 'Jonas',
+    //     lastName: 'Schmedtmann',
+    //     friends: ['Michael', 'Peter', 'Steven'],
+    //     job: 'teacher',
+    // }
 
-    const interestedIn = prompt('What do you want to know about jonas?');
+    // const interestedIn = prompt('What do you want to know about jonas?');
 
 
-        if(interestedIn === 'friends'){
-            console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}`);
-        } else if(jonas[interestedIn]) {
-            console.log(jonas[interestedIn]);
-        } else {
-            console.log('Wrong request.')
-        } 
+    //     if(interestedIn === 'friends'){
+    //         console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}`);
+    //     } else if(jonas[interestedIn]) {
+    //         console.log(jonas[interestedIn]);
+    //     } else {
+    //         console.log('Wrong request.')
+    //     } 
         
-    const bestFriend = `${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}`;
+    // const bestFriend = `${jonas.firstName} has ${jonas.friends.length} friends and his best friend is ${jonas.friends[0]}`;
 
-    console.log(bestFriend);
+    // console.log(bestFriend);
 
 //---------------------------------------------------------------------
