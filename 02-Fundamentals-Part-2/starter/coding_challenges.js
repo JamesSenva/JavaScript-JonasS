@@ -148,3 +148,36 @@ GOOD LUCK 😀  */
     // console.log(bestFriend);
 
 //---------------------------------------------------------------------
+
+// challenge
+// Jonas is a 46- year old teacher, and he has a drivers license
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYeah: 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: false,
+  
+    // calcAge: function (birthYeah) {
+    //   return 2037 - birthYeah;
+    // }
+  
+    // calcAge: function () {
+    //   // console.log(this);
+    //   return 2037 - this.birthYeah;
+    // }
+  
+    calcAge: function () {
+      this.age = 2037 - this.birthYeah;
+      return this.age;
+    },
+
+    getSummary: function() {
+        this.summary = `${this.firstName} is ${this.calcAge()} - year old ${this.job}, he has ${this.hasDriversLicense ? 'a' : 'no'} drivers license.`;
+        return this.summary;
+    }
+}
+
+console.log(jonas.getSummary());
