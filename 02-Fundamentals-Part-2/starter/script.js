@@ -198,33 +198,41 @@
 
 // 1. Add a method called 'describe' to the 'myCountry' object. This method will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword.
 
-const myCountry = {
-    country: 'India',
-    capital: 'Delhi',
-    language: 'Hindi',
-    population: 1394,
-    neighbours: ['Pakistan', 'Shri Lanka', 'Nepal', 'Bangladesh'],
-    describe: function(){
-        console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`);
-    },
-    checkIsland: function() {
-       return this.isIsland = this.neighbours.length === 0 ? true : false;
-    }   
-  }
+    // const myCountry = {
+    //     country: 'India',
+    //     capital: 'Delhi',
+    //     language: 'Hindi',
+    //     population: 1394,
+    //     neighbours: ['Pakistan', 'Shri Lanka', 'Nepal', 'Bangladesh'],
+    //     describe: function(){
+    //         console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`);
+    //     },
+    //     checkIsland: function() {
+    //     return this.isIsland = this.neighbours.length === 0 ? true : false;
+    //     }   
+    // }
 
 
 
 // 2. Call the 'describe' method
 
-    myCountry.describe();
+    // myCountry.describe();
 
 
 // 3. Add a method called 'checkIsland' to the 'myCountry' object. This method will set a new property on the object, called 'isIsland'. 'isIsland' will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.
 
     
-    myCountry.checkIsland(); // function must be called first
-    console.log(myCountry.isIsland); // to access the varible value stored inside it
+    // myCountry.checkIsland(); // function must be called first
+    // console.log(myCountry.isIsland); // to access the varible value stored inside it
 
 //------------------------------------------------------------------------
 
+//  lecture 46 - for loop
+
+// 1. There are elections in your country! In a small town, there are only 50 voters. Use a for loop to simulate the 50 people voting, by logging a string like this to the console (for numbers 1 to 50): 'Voter number 1 is currently voting'
     
+    for(let voter = 1; voter <= 50; voter++){
+        console.log(`Voter number ${voter} is currently voting.`);
+    }
+
+//------------------------------------------------------------------------
